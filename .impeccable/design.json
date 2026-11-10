@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T23:56:45.000Z",
+  "title": "Design System: Next Play Games - Kanban",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Vibrant Indigo",
+        "canonical": "#6366f1",
+        "tonalRamp": ["#312e81", "#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe"]
+      },
+      "alabaster-canvas": {
+        "role": "neutral",
+        "displayName": "Alabaster Canvas",
+        "canonical": "#f8fafc",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f8fafc"]
+      },
+      "sidebar-surface": {
+        "role": "neutral",
+        "displayName": "Sidebar Surface",
+        "canonical": "#f1f5f9",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f1f5f9"]
+      },
+      "card-surface": {
+        "role": "neutral",
+        "displayName": "Card Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#ffffff"]
+      },
+      "emerald-pulse": {
+        "role": "secondary",
+        "displayName": "Emerald Pulse",
+        "canonical": "#059669",
+        "tonalRamp": ["#064e3b", "#065f46", "#047857", "#059669", "#10b981", "#34d399", "#6ee7b7", "#d1fae5"]
+      },
+      "signal-amber": {
+        "role": "secondary",
+        "displayName": "Signal Amber",
+        "canonical": "#d97706",
+        "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fde68a", "#fef3c7"]
+      },
+      "crimson-alert": {
+        "role": "secondary",
+        "displayName": "Crimson Alert",
+        "canonical": "#e11d48",
+        "tonalRamp": ["#881337", "#9f1239", "#be123c", "#e11d48", "#f43f5e", "#fb7185", "#fda4af", "#ffe4e6"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Board title in main header" },
+      "headline": { "displayName": "Headline", "purpose": "Column section titles" },
+      "title": { "displayName": "Title", "purpose": "Task card titles and milestone names" },
+      "body": { "displayName": "Body", "purpose": "Task card descriptions and table rows" },
+      "label": { "displayName": "Label", "purpose": "Taxonomy chips and priority indicators" }
+    },
+    "shadows": [
+      { "name": "card-resting", "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)", "purpose": "Subtle depth on resting card" },
+      { "name": "card-hover", "value": "0 4px 6px -1px rgb(0 0 0 / 0.07)", "purpose": "Lifted elevation on card hover" },
+      { "name": "card-drag", "value": "0 15px 30px -5px rgba(0, 0, 0, 0.15)", "purpose": "Detached spatial lift during drag and drop" }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Smooth transition for card hover" }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Task Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Crisp white card displaying task scope, taxonomy labels, and priority badge.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Implement real-time drag-and-drop</h3><p class=\"ds-card-desc\">Integrate smooth card dragging across To Do, In Progress, In Review, and Done columns.</p><div class=\"ds-card-footer\"><div class=\"ds-tags\"><span class=\"ds-chip-tag\">Feature</span></div><span class=\"ds-priority-badge ds-priority-high\">HIGH</span></div></div>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; cursor: pointer; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; font-family: Inter, system-ui, sans-serif; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); } .ds-card:hover { border-color: #cbd5e1; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07); } .ds-card-title { font-size: 14px; font-weight: 500; color: #0f172a; margin: 0 0 4px 0; } .ds-card-desc { font-size: 12px; color: #475569; line-height: 1.4; margin: 0 0 12px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .ds-card-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #f1f5f9; padding-top: 8px; font-size: 12px; } .ds-tags { display: flex; gap: 4px; } .ds-chip-tag { display: inline-block; padding: 2px 8px; background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; border-radius: 4px; font-size: 10px; font-weight: 500; } .ds-priority-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; } .ds-priority-high { color: #e11d48; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Linear Studio Alabaster",
+    "overview": "Next Play Games - Kanban uses a warm, high-clarity light theme engineered for daytime production sprints and multi-view project execution. It marries a warm alabaster canvas (#f8fafc) with crisp white card surfaces (#ffffff), subtle cool slate structural dividers (#e2e8f0), and vibrant indigo accents (#6366f1).",
+    "keyCharacteristics": [
+      "Warm Alabaster Canvas: Soft #f8fafc backdrop prevents harsh glare while providing crisp optical contrast against pure white cards.",
+      "Pure White Cards with Subtle Depth: Cards stand out via hairline #e2e8f0 borders and soft ambient elevation (shadow-sm transitioning to shadow-md on hover).",
+      "Vibrant Indigo Signature: Electric Indigo (#6366f1) drives primary actions, active navigation states, and focus rings.",
+      "Status-Coded Top Accent Borders: Kanban columns feature 2px status headers (Slate, Indigo, Amber, Emerald) for instant peripheral orientation."
+    ],
+    "rules": [
+      {
+        "name": "The Clean Container Rule",
+        "body": "Column pods and scroll containers use clean background colors (#ffffff / #f8fafc) without backdrop-blur filters or transform properties, ensuring drag-and-drop coordinate math stays locked to the pointer.",
+        "section": "layout"
+      },
+      {
+        "name": "The Telemetry Luminescence Rule",
+        "body": "High-chroma colors (#6366f1, #059669, #d97706, #e11d48) are reserved for operational telemetry (status borders, tag chips, priority badges) and never applied as solid backgrounds across full cards.",
+        "section": "colors"
+      },
+      {
+        "name": "The Micro-Metadata Rule",
+        "body": "Card priority badges and taxonomy tags are set in compact uppercase tracking (10px, bold, 0.05em) to maximize scanability without competing with task titles.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do maintain high text contrast on light surfaces (Slate 900 for titles, Slate 600 for body).",
+      "Do keep ancestor wrappers of DragDropContext free from backdrop-blur-* and transform properties.",
+      "Do preserve 2px status top accent borders on Kanban columns.",
+      "Do use uppercase 10px tracking for priority flags and taxonomy labels."
+    ],
+    "donts": [
+      "Don't add backdrop-blur filters to the main content container or Kanban column wrappers.",
+      "Don't use low-contrast grey-on-white text that fails accessibility guidelines.",
+      "Don't apply heavy dark shadow rings on resting cards; keep shadows soft and clean."
+    ]
+  }
+}
